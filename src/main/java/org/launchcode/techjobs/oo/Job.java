@@ -85,6 +85,19 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    @Override
+    public String toString() {
+
+        return
+                "\nID: " + id + "\n" +
+                "Name: " + (name.equals("") ? "Data not available" : name) + "\n" +
+                "Employer: " + (employer.getValue().equals("") ? "Data not available" : employer) + "\n" +
+                "Location: " + (location.getValue().equals("") ? "Data not available" : location) + "\n" +
+                "Position Type: " + (positionType.getValue().equals("") ? "Data not available" : positionType) + "\n" +
+                "Core Competency: " + (coreCompetency.getValue().equals("") ? "Data not available" : coreCompetency) + "\n"
+                ;
+    }
+
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
