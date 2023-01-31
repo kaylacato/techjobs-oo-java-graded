@@ -16,13 +16,11 @@ import static org.junit.Assert.*;
 public class JobTest {
 
     @Test
-
     public void emptyTest() {
         assertEquals(1, 1);
     }
 
     @Test
-
     public void testSettingJobId() {
         Job testJob1 = new Job();
         Job testJob2 = new Job();
@@ -31,7 +29,6 @@ public class JobTest {
     }
 
     @Test
-
     public void testJobConstructorSetsAllFields() {
         Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
@@ -40,11 +37,9 @@ public class JobTest {
         assertEquals("Desert", testJob1.getLocation().getValue());
         assertEquals("Quality control", testJob1.getPositionType().getValue());
         assertEquals("Persistence", testJob1.getCoreCompetency().getValue());
-
     }
 
     @Test
-
     public void testJobsForEquality() {
         Job testJob1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job testJob2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
@@ -58,11 +53,10 @@ public class JobTest {
        String expectedOutput = "\nID: " + testJob1.getId() + "\nName: Product tester\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n" ;
        String actualOutput = testJob1.toString();
 
-        assertEquals(expectedOutput, actualOutput);
+       assertEquals(expectedOutput, actualOutput);
     }
 
     @Test
-
     public void testToStringHandlesEmptyField() {
       Job testJob1 = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         String expectedOutput = "\nID: " + testJob1.getId() + "\nName: Data not available\nEmployer: ACME\nLocation: Desert\nPosition Type: Quality control\nCore Competency: Persistence\n" ;
